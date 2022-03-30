@@ -45,76 +45,76 @@ int main() {
                 c = 0;
             }
             else {
-                if (vez % 2 == 0) {
-                    boardPosition[l - 1][c - 1] = 'X';
-                }
-                else {
-                    boardPosition[l - 1][c - 1] = 'O';
-                }
+                if (vez % 2 == 0)
+                  boardPosition[l - 1][c - 1] = 'X';
+
+                else
+                  boardPosition[l - 1][c - 1] = 'O';
+              
                 vez++;
                 playCounter++;
             }
-            if (boardPosition[0][0] == 'X' && boardPosition[0][1] == 'X' && boardPosition[0][2] == 'X') {
+            if (boardPosition[0][0] == 'X' && boardPosition[0][1] == 'X' && boardPosition[0][2] == 'X')
                 playCounter = 11;
-            }
-            if (boardPosition[1][0] == 'X' && boardPosition[1][1] == 'X' && boardPosition[1][2] == 'X') {
+          
+            if (boardPosition[1][0] == 'X' && boardPosition[1][1] == 'X' && boardPosition[1][2] == 'X')
                 playCounter = 11;
-            }
-            if (boardPosition[2][0] == 'X' && boardPosition[2][1] == 'X' && boardPosition[2][2] == 'X') {
+              
+            if (boardPosition[2][0] == 'X' && boardPosition[2][1] == 'X' && boardPosition[2][2] == 'X')
                 playCounter = 11;
-            }
-            if (boardPosition[0][0] == 'X' && boardPosition[1][0] == 'X' && boardPosition[2][0] == 'X') {
+          
+            if (boardPosition[0][0] == 'X' && boardPosition[1][0] == 'X' && boardPosition[2][0] == 'X')
                 playCounter = 11;
-            }
-            if (boardPosition[0][1] == 'X' && boardPosition[1][1] == 'X' && boardPosition[2][1] == 'X') {
-                playCounter = 11;
-            }
-            if (boardPosition[0][2] == 'X' && boardPosition[1][2] == 'X' && boardPosition[2][2] == 'X') {
-                playCounter = 11;
-            }
-            if (boardPosition[0][0] == 'X' && boardPosition[1][1] == 'X' && boardPosition[2][2] == 'X') {
-                playCounter = 11;
-            }
-            if (boardPosition[0][2] == 'X' && boardPosition[1][1] == 'X' && boardPosition[2][0] == 'X') {
-                playCounter = 11;
-            }
 
-            if (boardPosition[0][0] == 'O' && boardPosition[0][1] == 'O' && boardPosition[0][2] == 'O') {
+            if (boardPosition[0][1] == 'X' && boardPosition[1][1] == 'X' && boardPosition[2][1] == 'X')
+                playCounter = 11;
+
+            if (boardPosition[0][2] == 'X' && boardPosition[1][2] == 'X' && boardPosition[2][2] == 'X')
+                playCounter = 11;
+
+            if (boardPosition[0][0] == 'X' && boardPosition[1][1] == 'X' && boardPosition[2][2] == 'X')
+                playCounter = 11;
+
+            if (boardPosition[0][2] == 'X' && boardPosition[1][1] == 'X' && boardPosition[2][0] == 'X')
+                playCounter = 11;
+
+
+            if (boardPosition[0][0] == 'O' && boardPosition[0][1] == 'O' && boardPosition[0][2] == 'O')
                 playCounter = 12;
-            }
-            if (boardPosition[1][0] == 'O' && boardPosition[1][1] == 'O' && boardPosition[1][2] == 'O') {
+
+            if (boardPosition[1][0] == 'O' && boardPosition[1][1] == 'O' && boardPosition[1][2] == 'O')
                 playCounter = 12;
-            }
-            if (boardPosition[2][0] == 'O' && boardPosition[2][1] == 'O' && boardPosition[2][2] == 'O') {
+
+            if (boardPosition[2][0] == 'O' && boardPosition[2][1] == 'O' && boardPosition[2][2] == 'O')
                 playCounter = 12;
-            }
-            if (boardPosition[0][0] == 'O' && boardPosition[1][0] == 'O' && boardPosition[2][0] == 'O') {
+
+            if (boardPosition[0][0] == 'O' && boardPosition[1][0] == 'O' && boardPosition[2][0] == 'O')
                 playCounter = 12;
-            }
-            if (boardPosition[0][1] == 'O' && boardPosition[1][1] == 'O' && boardPosition[2][1] == 'O') {
+
+            if (boardPosition[0][1] == 'O' && boardPosition[1][1] == 'O' && boardPosition[2][1] == 'O')
                 playCounter = 12;
-            }
-            if (boardPosition[0][2] == 'O' && boardPosition[1][2] == 'O' && boardPosition[2][2] == 'O') {
+
+            if (boardPosition[0][2] == 'O' && boardPosition[1][2] == 'O' && boardPosition[2][2] == 'O')
                 playCounter = 12;
-            }
-            if (boardPosition[0][0] == 'O' && boardPosition[1][1] == 'O' && boardPosition[2][2] == 'O') {
+
+            if (boardPosition[0][0] == 'O' && boardPosition[1][1] == 'O' && boardPosition[2][2] == 'O')
                 playCounter = 12;
-            }
-            if (boardPosition[0][2] == 'O' && boardPosition[1][1] == 'O' && boardPosition[2][0] == 'O') {
+
+            if (boardPosition[0][2] == 'O' && boardPosition[1][1] == 'O' && boardPosition[2][0] == 'O')
                 playCounter = 12;
-            }
+
 
         } while (playCounter <= 9);
         gameBoard(boardPosition);
-        if (playCounter == 10) {
+        if (playCounter == 10)
             printf("Jogo empatado\n");
-        }
-        if (playCounter == 11) {
+
+        if (playCounter == 11)
             printf("Vencedor jogador X\n");
-        }
-        if (playCounter == 12) {
+
+        if (playCounter == 12)
             printf("Vencedor O\n");
-        }
+
         printf("Deseja jogar novamente?[S-N]");
         scanf("%s", &playAgain);
       
